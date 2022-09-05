@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.music
+package com.example.myapplication.ui.Songs
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.BaseAdapter
 import com.example.myapplication.R
 import com.example.myapplication.databinding.SongItemBinding
 
-class MusicAdapter(val songs : List<Int>) : BaseAdapter() {
+class SongAdapter(val songs : List<Int>) : BaseAdapter() {
 
     override fun getCount(): Int = songs.size
 
@@ -22,7 +22,7 @@ class MusicAdapter(val songs : List<Int>) : BaseAdapter() {
         binding.btPlay.setOnClickListener {
             if (context != null) {
                 val song = songs.getOrNull(position) ?: R.raw.jazz
-                MusicPlayer(context).playSong(song)
+                SongPlayer(context).playSong(song)
             }
         }
         return binding.root

@@ -1,10 +1,10 @@
-package com.example.myapplication.ui.music
+package com.example.myapplication.ui.Songs
 
 import android.content.Context
 import android.media.AudioAttributes
 import android.media.MediaPlayer
 
-class MusicPlayer(private val context: Context) {
+class SongPlayer(private val context: Context) {
 
     lateinit var player : MediaPlayer
 
