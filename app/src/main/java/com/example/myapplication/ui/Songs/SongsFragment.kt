@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentSongsBinding
+import com.example.myapplication.ui.Notes.loops
 
 class SongsFragment : Fragment() {
 
@@ -23,13 +23,7 @@ class SongsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.lvMusic.adapter = SongAdapter(getSongs())
+        binding.lvMusic.adapter = AlbumAdapter(loops)
     }
 
-    private fun getSongs() = listOf<Int>(
-        R.raw.beat,
-        R.raw.jazz,
-        R.raw.space,
-        R.raw.think
-    )
 }
