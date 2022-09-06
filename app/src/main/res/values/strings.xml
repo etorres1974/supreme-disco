@@ -3,4 +3,10 @@
     <string name="title_home">Home</string>
     <string name="title_songs">Músicas</string>
     <string name="title_notes">Notas</string>
+
+    <string-array name="instruments_array">
+        <item>Piano</item>
+        <item>Guitarra</item>
+        <item>Bateria</item>
+    </string-array>
 </resources>
