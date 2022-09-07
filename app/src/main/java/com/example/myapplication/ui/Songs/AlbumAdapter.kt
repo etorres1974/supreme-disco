@@ -28,12 +28,12 @@ class AlbumAdapter(val instrument: Album) : BaseAdapter() {
 
     private fun setupView(sound: Sound?, binding: SongItemBinding, context : Context?){
         if(sound != null) {
-            binding.btPlay.setOnClickListener {
+            binding.cardView.setOnClickListener {
                 if (context != null) {
                     SongPlayer(context).playSong(sound.audio)
                 }
             }
-            binding.btPlay.background = context?.getDrawable(sound.image)
+            binding.imageView.setImageDrawable(context?.getDrawable(sound.image))
         }
     }
 
